@@ -1,5 +1,5 @@
 import { css } from '@emotion/css'
-import { Card, CardActionArea, CardMedia, Chip, Grid, Typography } from '@mui/material'
+import { Card, CardActionArea, CardMedia, Grid, Typography } from '@mui/material'
 import type { PokemonDetail } from '../data-access/api/pokemon'
 import { theme } from '../pages/_app'
 import ChipPokemonType from './ChipPokemonType'
