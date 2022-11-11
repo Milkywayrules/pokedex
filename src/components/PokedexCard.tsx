@@ -23,7 +23,7 @@ export default function PokedexCard({ pokemon, handleOpenModal, chipColorMap }: 
           'marginX': 'auto',
           'maxWidth': 345,
           'borderRadius': '24px',
-          'backgroundColor': 'lightgrey',
+          'backgroundColor': 'white',
           ':hover': {
             boxShadow: '0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);',
           },
@@ -61,27 +61,10 @@ export default function PokedexCard({ pokemon, handleOpenModal, chipColorMap }: 
             >
               {getPokemonCardTag(pokemon.id)}
             </Typography>
-            <Typography variant="h4" color="text.secondary">
+            <Typography variant="h4" color="text.secondary" fontWeight={800}>
               {pokemon.name}
             </Typography>
 
-            {/* <Grid container direction="row" spacing={1} marginTop="4px">
-              {pokemon.types.map((type, typeIndex) => {
-                return (
-                  <Grid item xs={6} key={typeIndex}>
-                    <Chip
-                      label={type.type.name}
-                      className={css`
-                        background-color: ${chipColorMap[type.type.name] || 'black'};
-                        color: white;
-                        width: 100%;
-                        font-weight: 800;
-                      `}
-                    />
-                  </Grid>
-                )
-              })}
-            </Grid> */}
             <ChipPokemonType pokemonTypes={pokemon.types} chipColorMap={chipColorMap} />
           </div>
         </CardActionArea>

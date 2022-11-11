@@ -9,7 +9,6 @@ export default function HeroHomepage() {
     <div
       className={css`
         padding: 96px 192px;
-        background-color: lightgrey;
       `}
     >
       <Grid display="flex" gap={24}>

@@ -3,6 +3,7 @@ import { CircularProgress, Grid, Typography } from '@mui/material'
 import { useEffect, useLayoutEffect, useState } from 'react'
 import type { PokemonDetail, ResPokemonList } from '../data-access/api'
 import api from '../data-access/api'
+import { theme } from '../pages/_app'
 import { colorPicker } from '../utils/colorPicker'
 import CustomModal from './CustomModal'
 import PokedexCard from './PokedexCard'
@@ -59,6 +60,7 @@ export default function Pokedex() {
     <div
       className={css`
         padding: 96px 192px;
+        background-color: ${theme.palette.primary.light};
       `}
     >
       <Grid
