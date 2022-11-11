@@ -12,7 +12,7 @@ interface Props {
 }
 
 const getPokemonCardTag = (pokemonId: PokemonDetail['id']) => {
-  return `#${pokemonId.toString().padStart(3, '0')}`
+  return `#${pokemonId.toString().padStart(5, '0')}`
 }
 
 export default function PokedexCard({ pokemon, handleOpenModal, chipColorMap }: Props) {
