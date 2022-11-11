@@ -60,9 +60,11 @@ class ApiPokemon extends BaseAPI {
     super()
   }
 
-  public async getList(limit: number) {
+  public async getList(limit: number, page: number) {
     try {
-      const { data } = await this._fetch.get<ResPokemonList>(`pokemon/?limit=${limit}`)
+      const { data } = await this._fetch.get<ResPokemonList>(
+        `pokemon/?offset=${limit * (page - 1)}&limit=${limit}`,
+      )
 
       return data
     } catch (error) {
